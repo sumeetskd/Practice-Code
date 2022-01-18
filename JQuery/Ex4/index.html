@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Animation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <h1 class="head">About Animation</h1>
+    <p class="c1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sapiente quae, quasi atque veritatis
+        sunt pariatur veniam sed illo provident dolorem dolor? Facilis sit adipisci repudiandae cupiditate aut
+        dignissimos accusamus!
+    </p>
+    <p class="c2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid accusantium similique aut reiciendis eum
+        provident numquam, illo consequatur ut animi sit quas eius porro. Consequatur iusto est perferendis totam
+        excepturi?
+    </p>
+</body>
+<script>
+    $(document).ready(function(){
+        $('p.c1').click(function(){
+            console.log("Animate p1");
+            $('p.c1').toggle(1000);
+        })
+        $('p.c2').click(function(){
+            console.log("Animate p2");
+            $('p.c2').toggle(2000);
+            //toogle->fades out in 2000ms=2sec
+        })
+        $('h1').click(function(){
+            console.log("Header");
+            $('p.c1').slideDown(1000);
+            $('p.c2').slideDown(3000);
+
+        })
+    });
+</script>
+</html>

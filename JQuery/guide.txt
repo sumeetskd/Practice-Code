@@ -2,8 +2,10 @@ jQuery
 
 Selection of element(using id):-
 
-("#id_name").click()
+("#id_name").click()    -> to event mouse click triggered 
 ("#id_name").before()
+
+$this => ivokes current html element
 
 # -> used to access 'id'
 . -> to access class

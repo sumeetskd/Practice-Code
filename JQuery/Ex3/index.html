@@ -44,6 +44,13 @@
                 }
             });
         })
+        //focus
+        $(':input[type="text"]').focusin(function(){
+            $(this).attr('class','focusedin');
+        });
+        $(':input[type="text"]').focusout(function(){
+            $(this).attr('class','focusedout');
+        })
     });
 </script>
 </html>
