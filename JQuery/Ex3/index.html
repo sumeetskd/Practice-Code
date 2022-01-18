@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery Selector</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form action="" id="frm">
+        Name: <input type="text" id="name" placeholder="Name">
+        <input type="button" class="add-row" value="Add Customer Details">
+
+        <table>
+            <thead>
+                <tr><th>Select</th><th>Name</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="record" id=""></td>
+                    <td>Peter Jackson</td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="del-row">Delete Customer Details</button>
+
+    </form>
+</body>
+<script>
+    $(document).ready(function(){
+        $(".add-row").click(function(){
+            var name = $('#name').val();
+            var markup = "<tr><td><input type='checkbox' name='record'></td><td>"+name+"</td></tr>"
+            $("table tbody").append(markup);
+        });
+
+        //to remove
+        $(".del-row").click(function(){
+            $("table tbody").find('input[name="record"]').each(function(){
+                if($(this).is(":checked")){
+                    $(this).parents("tr").remove();
+                }
+            });
+        })
+    });
+</script>
+</html>
