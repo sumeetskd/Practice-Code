@@ -1,0 +1,8 @@
+jQuery
+
+Selection of element(using id):-
+
+("#id_name").click()
+("#id_name").before()
+
+# -> used before idname
