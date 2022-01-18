@@ -5,4 +5,6 @@ Selection of element(using id):-
 ("#id_name").click()
 ("#id_name").before()
 
-# -> used before idname
+# -> used to access 'id'
+. -> to access class
+p -> to directly access paragraph elements
